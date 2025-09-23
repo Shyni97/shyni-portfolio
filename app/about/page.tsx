@@ -38,7 +38,7 @@ export default function AboutPage() {
             </p>
             <div className="mt-6">
               <Button asChild>
-                <a href="/Shyni's cv.pdf" download>
+                <a href="/Shyni-cv.pdf" download>
                   <Download className="h-4 w-4 mr-2" />
                   Download CV
                 </a>

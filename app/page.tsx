@@ -39,7 +39,7 @@ export default function HomePage() {
               </Button>
               <Button variant="outline" size="lg" className="text-lg px-8 py-6 bg-transparent" asChild>
                 <a
-                  href="/cv.pdf"
+                  href="/Shyni-cv.pdf"
                   download
                 >
                   <Download className="mr-2 h-5 w-5" />
