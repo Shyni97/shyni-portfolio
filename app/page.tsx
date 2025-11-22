@@ -19,9 +19,9 @@ export default function HomePage() {
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold mb-8 text-balance leading-tight">
-              Hi, I'm <span className="text-primary">Shyni</span>
+              Hi, I'm <span className="text-primary">Shyni Atapattu</span>
               <br />
-              <span className="text-secondary">Full Stack Developer</span> & UI/UX Engineer
+              <span className="text-secondary">Aspiring Full Stack Developer</span>
             </h1>
 
             <p className="text-xl md:text-2xl text-muted-foreground mb-12 text-pretty max-w-3xl mx-auto leading-relaxed">
