@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Home, User, FolderOpen, Mail, Menu, X } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { useState } from "react"
 
@@ -19,10 +20,17 @@ export function Navigation() {
 
   return (
     <nav className="fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b border-border z-50">
-      <div className="container mx-auto px-4 py-4">
+      <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
-          <Link href="/" className="font-bold text-xl text-primary hover:text-primary/80 transition-colors">
-            Shyni Atapattu
+          <Link href="/" className="flex items-center hover:opacity-80 transition-opacity -ml-24">
+            <Image 
+              src="/Shyni Atapattu.png" 
+              alt="Shyni Atapattu Logo" 
+              width={200} 
+              height={50}
+              className="h-14 w-auto"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}

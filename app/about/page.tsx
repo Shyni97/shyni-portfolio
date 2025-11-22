@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Progress } from "@/components/ui/progress"
+import Image from "next/image"
 import {
   GraduationCap,
   Award,
@@ -49,56 +50,71 @@ export default function AboutPage() {
           <div className="mb-16 relative">
             <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-secondary/10 to-primary/10 rounded-3xl blur-3xl -z-10"></div>
             
-            <div className="text-center space-y-6">
-              <div className="space-y-4">
-                <h1 className="text-5xl md:text-7xl font-bold">
-                  <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
-                    Shyni Atapattu
-                  </span>
-                </h1>
-                <div className="font-mono text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-                  <span className="text-primary">&lt;</span>
-                  <span className="text-secondary">dev</span>
-                  <span className="text-primary">&gt;</span>
-                  <span className="px-2">Building scalable, user-centric solutions with clean code & comprehensive testing</span>
-                  <span className="text-primary">&lt;/</span>
-                  <span className="text-secondary">dev</span>
-                  <span className="text-primary">&gt;</span>
+            <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16 py-8">
+              {/* Professional Photo */}
+              <div className="flex-shrink-0 overflow-hidden rounded-lg w-[240px] h-[320px]">
+                <Image
+                  src="/shyni.jpeg"
+                  alt="Shyni Atapattu"
+                  width={360}
+                  height={480}
+                  className="object-cover w-full h-full scale-110 shadow-lg"
+                  priority
+                />
+              </div>
+
+              {/* Text Content */}
+              <div className="flex-1 text-center md:text-left space-y-6">
+                <div className="space-y-4">
+                  <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold">
+                    <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
+                      Shyni Atapattu
+                    </span>
+                  </h1>
+                  <div className="font-mono text-base md:text-lg lg:text-xl text-muted-foreground">
+                    <span className="text-primary">&lt;</span>
+                    <span className="text-secondary">dev</span>
+                    <span className="text-primary">&gt;</span>
+                    <span className="px-2">Building scalable, user-centric solutions with clean code & comprehensive testing</span>
+                    <span className="text-primary">&lt;/</span>
+                    <span className="text-secondary">dev</span>
+                    <span className="text-primary">&gt;</span>
+                  </div>
                 </div>
-              </div>
 
-              <div className="flex flex-wrap gap-3 justify-center pt-4">
-                <Badge variant="secondary" className="px-4 py-2 text-sm font-mono">
-                  <Code2 className="h-3 w-3 mr-1" />
-                  TypeScript
-                </Badge>
-                <Badge variant="secondary" className="px-4 py-2 text-sm font-mono">
-                  <Braces className="h-3 w-3 mr-1" />
-                  React/Next.js
-                </Badge>
-                <Badge variant="secondary" className="px-4 py-2 text-sm font-mono">
-                  <Database className="h-3 w-3 mr-1" />
-                  Full-Stack
-                </Badge>
-                <Badge variant="secondary" className="px-4 py-2 text-sm font-mono">
-                  <Shield className="h-3 w-3 mr-1" />
-                  QA Specialist
-                </Badge>
-              </div>
+                <div className="flex flex-wrap gap-3 justify-center md:justify-start pt-4">
+                  <Badge variant="secondary" className="px-4 py-2 text-sm font-mono">
+                    <Code2 className="h-3 w-3 mr-1" />
+                    TypeScript
+                  </Badge>
+                  <Badge variant="secondary" className="px-4 py-2 text-sm font-mono">
+                    <Braces className="h-3 w-3 mr-1" />
+                    React/Next.js
+                  </Badge>
+                  <Badge variant="secondary" className="px-4 py-2 text-sm font-mono">
+                    <Database className="h-3 w-3 mr-1" />
+                    Full-Stack
+                  </Badge>
+                  <Badge variant="secondary" className="px-4 py-2 text-sm font-mono">
+                    <Shield className="h-3 w-3 mr-1" />
+                    QA Specialist
+                  </Badge>
+                </div>
 
-              <div className="flex flex-wrap gap-4 justify-center pt-6">
-                <Button asChild size="lg" className="gap-2 font-semibold">
-                  <a href="/Shyni-cv.pdf" download>
-                    <Download className="h-4 w-4" />
-                    Download Resume
-                  </a>
-                </Button>
-                <Button asChild size="lg" variant="outline" className="gap-2 font-semibold border-primary/50 hover:bg-primary/10">
-                  <a href="https://github.com/Shyni97" target="_blank" rel="noopener noreferrer">
-                    <GitBranch className="h-4 w-4" />
-                    View GitHub
-                  </a>
-                </Button>
+                <div className="flex flex-wrap gap-4 justify-center md:justify-start pt-6">
+                  <Button asChild size="lg" className="gap-2 font-semibold">
+                    <a href="/Shyni-cv.pdf" download>
+                      <Download className="h-4 w-4" />
+                      Download Resume
+                    </a>
+                  </Button>
+                  <Button asChild size="lg" variant="outline" className="gap-2 font-semibold border-primary/50 hover:bg-primary/10">
+                    <a href="https://github.com/Shyni97" target="_blank" rel="noopener noreferrer">
+                      <GitBranch className="h-4 w-4" />
+                      View GitHub
+                    </a>
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
