@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ArrowRight, Code, Database, TestTube, Github, Linkedin, Mail, Download, Sparkles } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 import { Navigation } from "@/components/navigation"
 
 export default function HomePage() {
@@ -11,41 +12,71 @@ export default function HomePage() {
       <Navigation />
 
       <section className="pt-32 pb-20 px-4">
-        <div className="container mx-auto max-w-5xl">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <Sparkles className="h-4 w-4" />
-              Available for Internship
+        <div className="container mx-auto max-w-6xl">
+          <div className="flex flex-col md:flex-row items-center gap-20 mb-24">
+            {/* Professional Photo with Elegant Frame */}
+            <div className="relative flex-shrink-0 group">
+              <div className="absolute -inset-6 bg-gradient-to-br from-primary/10 via-secondary/10 to-primary/10 rounded-3xl blur-3xl opacity-40 group-hover:opacity-60 transition-all duration-700"></div>
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl transform rotate-3 group-hover:rotate-6 transition-transform duration-500"></div>
+                <div className="relative overflow-hidden rounded-2xl w-[300px] h-[380px] shadow-2xl ring-1 ring-black/5 dark:ring-white/10 bg-white dark:bg-gray-900">
+                  <Image
+                    src="/shyni.jpeg"
+                    alt="Shyni Atapattu"
+                    width={450}
+                    height={570}
+                    className="object-cover w-full h-full scale-110 group-hover:scale-[1.15] transition-transform duration-700"
+                    priority
+                  />
+                </div>
+              </div>
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-bold mb-8 text-balance leading-tight">
-              Hi, I'm <span className="text-primary">Shyni Atapattu</span>
-              <br />
-              <span className="text-secondary">Aspiring Full Stack Developer</span>
-            </h1>
+            {/* Text Content */}
+            <div className="flex-1 text-center md:text-left space-y-10">
+              <div className="space-y-6">
+                <div className="inline-flex items-center gap-2.5 bg-gradient-to-r from-primary/10 via-secondary/5 to-primary/10 text-primary px-6 py-3 rounded-full text-sm font-semibold shadow-sm border border-primary/20 backdrop-blur-sm">
+                  <Sparkles className="h-4 w-4 animate-pulse" />
+                  <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Available for Internship</span>
+                </div>
 
-            <p className="text-xl md:text-2xl text-muted-foreground mb-12 text-pretty max-w-3xl mx-auto leading-relaxed">
-              Dedicated and motivated IT undergraduate with hands-on experience in web development, UI/UX,
-              and collaborative projects. Passionate about solving real-world problems and building scalable
-              software solutions with a strong foundation in front-end/back-end development and databases.
-            </p>
+                <div className="space-y-4">
+                  <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-balance leading-[1.1] tracking-tight">
+                    <span className="text-foreground/90">Hi, I'm</span>{" "}
+                    <span className="block mt-2 bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
+                      Shyni Atapattu
+                    </span>
+                  </h1>
+                  
+                  <p className="text-2xl md:text-3xl text-muted-foreground/80 font-light tracking-wide">
+                    Aspiring Full Stack Developer
+                  </p>
+                </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-              <Button size="lg" className="group text-lg px-8 py-6" asChild>
+                <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto md:mx-0 font-light">
+                  Dedicated IT undergraduate specializing in web development and UI/UX design. 
+                  Passionate about crafting elegant solutions to real-world problems through 
+                  clean code and thoughtful architecture.
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-2">
+              <Button size="lg" className="group text-base px-10 py-7 shadow-lg hover:shadow-2xl transition-all duration-300 rounded-xl font-semibold" asChild>
                 <Link href="/projects">
                   View My Work
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-6 bg-transparent" asChild>
+              <Button variant="outline" size="lg" className="text-base px-10 py-7 border-2 hover:bg-primary/5 hover:border-primary/40 transition-all duration-300 rounded-xl font-semibold" asChild>
                 <a
-                  href="/Shyni-cv.pdf"
+                  href="/Shyni Resume.pdf"
                   download
                 >
                   <Download className="mr-2 h-5 w-5" />
                   Download CV
                 </a>
               </Button>
+              </div>
             </div>
           </div>
 
