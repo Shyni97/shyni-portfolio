@@ -494,7 +494,7 @@ export default function HomePage() {
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
               I'm actively seeking internship opportunities where I can contribute, learn, and grow. 
-              Let's discuss how my skills in web development and QA can add value to your team.
+              Let's discuss how my skills in web development and UI/UX design can add value to your team.
             </p>
           </div>
 

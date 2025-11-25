@@ -55,7 +55,6 @@ export default function ProjectsPage() {
       technologies: ["Mobile App", "UX/UI Design", "User Research"],
       category: "Mobile Development",
       status: "Completed",
-      githubUrl: "https://github.com/Shyni97/PathWise",
       features: [
         "Interactive CV builder with templates",
         "Career assessment quizzes and personality tests",
@@ -80,8 +79,7 @@ export default function ProjectsPage() {
       technologies: ["JavaScript", "HTML", "CSS"],
       category: "Web Development",
       status: "Completed",
-      liveUrl: "shyni97.github.io/bmi_calculator",
-      githubUrl: "https://github.com/Shyni97/bmi_calculator",
+      githubUrl: "github.com/Shyni97/bmi-calculator",
       features: [
         "Real-time BMI calculation",
         "Input validation and error handling",
@@ -106,8 +104,6 @@ export default function ProjectsPage() {
       technologies: ["JavaScript", "HTML", "CSS", "Responsive Design"],
       category: "Web Development",
       status: "Completed",
-      liveUrl: "codepen.io/Shyni-Atapattu/pen/wBaNKyR",
-      githubUrl: "https://github.com/Shyni97/tick-bear",
       features: [
         "Interactive JavaScript features",
         "Cross-device compatibility testing",
@@ -132,7 +128,7 @@ export default function ProjectsPage() {
       technologies: ["Git", "GitHub", "Documentation", "Version Control"],
       category: "Development Tools",
       status: "Ongoing",
-      githubUrl: "https://github.com/Shyni97/shyni-portfolio",
+      githubUrl: "github.com/Shyni97",
       features: [
         "Well-organized project structure",
         "Comprehensive documentation",
@@ -181,7 +177,6 @@ export default function ProjectsPage() {
   technologies: ["React.js", "Node.js", "MySQL", "Express.js"],
   category: "University Project",
   status: "Completed",
-  liveUrl: "www.linkedin.com/posts/shyni592_caf%C3%A9pos-web-based-caf%C3%A9-billing-inventory-activity-7398927514254905344-7NlZ",
   features: [
     "Supplier management module",
     "Inventory tracking and updates",
@@ -287,19 +282,15 @@ export default function ProjectsPage() {
 
                     <div className="flex gap-2">
                       {project.liveUrl && (
-                        <Button size="sm" asChild>
-                          <Link href={`https://${project.liveUrl}`} target="_blank">
-                            <ExternalLink className="h-4 w-4 mr-2" />
-                            Live Demo
-                          </Link>
+                        <Button size="sm">
+                          <ExternalLink className="h-4 w-4 mr-2" />
+                          Live Demo
                         </Button>
                       )}
                       {project.githubUrl && (
-                        <Button variant="outline" size="sm" asChild>
-                          <Link href={project.githubUrl} target="_blank">
-                            <Github className="h-4 w-4 mr-2" />
-                            View Code
-                          </Link>
+                        <Button variant="outline" size="sm">
+                          <Github className="h-4 w-4 mr-2" />
+                          View Code
                         </Button>
                       )}
                     </div>
