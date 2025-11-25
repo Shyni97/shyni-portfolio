@@ -47,9 +47,7 @@
   --card-foreground: oklch(1 0 0); /* Pure white for card text */
   --popover: oklch(0.20 0.05 240);
   --popover-foreground: oklch(1 0 0);
-  --primary: oklch(0.55 0.12 220); /* Brighter teal blue accent */
-  --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.45 0.10 230); /* Brighter medium blue */
+  --primary: oklch(0.55 0.12 220); /* Brighter teal blue acce0ary: oklch(0.45 0.10 230); /* Brighter medium blue */
   --secondary-foreground: oklch(1 0 0);
   --muted: oklch(0.30 0.04 240);
   --muted-foreground: oklch(0.85 0 0); /* Much brighter muted text */
