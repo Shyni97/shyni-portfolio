@@ -145,9 +145,9 @@ export default function ContactPage() {
                       <span
                         className="text-sm font-medium px-2 py-1 rounded-md border"
                         style={{
-                          backgroundColor: "#dcfce7",
-                          color: "#166534",
-                          borderColor: "#bbf7d0",
+                          backgroundColor: "#cffafe",
+                          color: "#155e75",
+                          borderColor: "#a5f3fc",
                         }}
                       >
                         Available for Internship
@@ -178,8 +178,8 @@ export default function ContactPage() {
                 <CardContent>
                   {isSubmitted ? (
                     <div className="text-center py-8">
-                      <div className="p-3 bg-green-100 rounded-full w-fit mx-auto mb-4">
-                        <CheckCircle className="h-8 w-8 text-green-600" />
+                      <div className="p-3 bg-cyan-100 rounded-full w-fit mx-auto mb-4">
+                        <CheckCircle className="h-8 w-8 text-cyan-600" />
                       </div>
                       <h3 className="text-lg font-semibold mb-2">Message Sent Successfully!</h3>
                       <p className="text-muted-foreground">
