@@ -19,7 +19,6 @@ import {
 } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
-import { Navigation } from "@/components/navigation"
 import { AnimatedTechShowcase } from "@/components/animated-tech-showcase"
 import { PortfolioTimeline } from "@/components/portfolio-timeline"
 import CertificationsSection from "@/components/certifications-section"
@@ -166,7 +165,7 @@ export default function SinglePagePortfolio() {
     return (
       <Card className="overflow-hidden hover:shadow-2xl transition-all duration-500 bg-[#1a2332] border-primary/20 hover:border-primary/50 group h-full flex flex-col">
         {/* Image/Video Section */}
-        <div className="relative bg-gradient-to-br from-[#0f1a2f] to-[#1a2332] p-6 flex items-center justify-center h-64 overflow-hidden">
+        <div className="relative bg-gradient-to-br from-[#0f1a2f] to-[#1a2332] p-4 sm:p-6 flex items-center justify-center h-52 sm:h-64 overflow-hidden">
           {project.video ? (
             <div className="w-full h-full flex items-center justify-center transform group-hover:scale-110 transition-transform duration-500">
               <video
@@ -201,7 +200,7 @@ export default function SinglePagePortfolio() {
         </div>
 
         {/* Content Section */}
-        <div className="p-6 flex flex-col flex-grow">
+        <div className="p-5 sm:p-6 flex flex-col flex-grow">
           <div className="mb-4">
             <Badge variant="outline" className="text-primary border-primary/30 text-xs mb-3">
               {project.subtitle}
@@ -267,32 +266,31 @@ export default function SinglePagePortfolio() {
   }
 
   return (
-    <div className="min-h-screen relative overflow-hidden">
-      <Navigation />
+    <div className="min-h-screen relative overflow-x-hidden">
       
       {/* HOME SECTION */}
-      <section id="home" className="pt-32 pb-20 px-4 relative min-h-screen flex items-center">
+      <section id="home" className="pt-28 sm:pt-32 pb-16 sm:pb-20 px-4 sm:px-6 relative min-h-screen flex items-center">
         <div className="absolute inset-0 bg-gradient-to-br from-[#151d28] via-[#1a2332] to-[#151d28] -z-10"></div>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent -z-10"></div>
         
         <div className="container mx-auto max-w-7xl relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className={`flex justify-center lg:justify-start order-2 lg:order-1 transition-all duration-1000 ${mounted ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
               <AnimatedTechShowcase />
             </div>
 
             <div className={`order-1 lg:order-2 transition-all duration-1000 delay-200 ${mounted ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-              <div className="space-y-4">
+              <div className="space-y-4 sm:space-y-5">
                 <div className="space-y-1">
                   <p className="text-sm text-muted-foreground">Hello, I'm</p>
-                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
                     <span className="text-primary">SHYNI</span>{" "}
                     <span className="text-foreground">ATAPATTU</span>
                   </h1>
                 </div>
 
                 <div className="space-y-3">
-                  <h2 className="text-xl md:text-2xl font-semibold text-foreground">
+                  <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-foreground">
                     IT Undergraduate & Full Stack Developer
                   </h2>
                   <p className="text-sm md:text-base text-muted-foreground max-w-xl leading-relaxed">
@@ -302,10 +300,10 @@ export default function SinglePagePortfolio() {
                   </p>
                 </div>
 
-                <div className="flex flex-wrap gap-3 pt-2">
+                <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 pt-2">
                   <Button 
                     size="default" 
-                    className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-5 text-sm font-semibold rounded-md"
+                    className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-5 text-sm font-semibold rounded-md w-full sm:w-auto"
                     asChild
                   >
                     <a href="#contact">
@@ -315,7 +313,7 @@ export default function SinglePagePortfolio() {
                   <Button 
                     size="default" 
                     variant="outline" 
-                    className="border-2 border-primary/30 hover:border-primary hover:bg-primary/10 px-6 py-5 text-sm font-semibold rounded-md"
+                    className="border-2 border-primary/30 hover:border-primary hover:bg-primary/10 px-6 py-5 text-sm font-semibold rounded-md w-full sm:w-auto"
                     asChild
                   >
                     <a href="/Shyni Resume.pdf" download>
@@ -325,8 +323,8 @@ export default function SinglePagePortfolio() {
                   </Button>
                 </div>
 
-                <div className="mt-8 relative">
-                  <div className="glass rounded-2xl p-6 border-2 border-primary/20 shadow-xl hover:border-primary/40 transition-all duration-300 max-w-md animate-float-delayed">
+                <div className="mt-6 sm:mt-8 relative">
+                  <div className="glass rounded-2xl p-4 sm:p-6 border-2 border-primary/20 shadow-xl hover:border-primary/40 transition-all duration-300 max-w-full sm:max-w-md animate-float-delayed">
                     <div className="space-y-3">
                       <div className="flex items-center gap-2 border-b border-primary/20 pb-2">
                         <div className="flex gap-1.5">
@@ -358,7 +356,7 @@ export default function SinglePagePortfolio() {
             </div>
           </div>
 
-          <div className={`mt-16 flex flex-wrap gap-3 justify-center lg:justify-start transition-all duration-1000 delay-500 ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <div className={`mt-12 sm:mt-16 flex flex-wrap gap-3 justify-center lg:justify-start transition-all duration-1000 delay-500 ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             {[
               { icon: Github, label: "GitHub Profile", href: "https://github.com/Shyni97" },
               { icon: Code, label: "View Projects", href: "#projects" },
@@ -386,10 +384,10 @@ export default function SinglePagePortfolio() {
       <PortfolioTimeline />
 
       {/* Skills Section */}
-      <section className="py-24 px-4 relative z-10 bg-gradient-to-b from-white to-gray-50">
+      <section className="py-16 sm:py-24 px-4 sm:px-6 relative z-10 bg-gradient-to-b from-white to-gray-50">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-primary">
               Technical Arsenal
             </h2>
             <p className="text-lg text-slate-700 max-w-3xl mx-auto">
@@ -512,10 +510,10 @@ export default function SinglePagePortfolio() {
       </section>
 
       {/* ABOUT SECTION */}
-      <section id="about" className="py-24 px-4 bg-background">
+      <section id="about" className="py-16 sm:py-24 px-4 sm:px-6 bg-background">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
               <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
                 About Me
               </span>
@@ -691,7 +689,7 @@ export default function SinglePagePortfolio() {
       </section>
 
       {/* PROJECTS SECTION */}
-      <section id="projects" className="py-24 px-4 bg-[#0f1620] relative overflow-hidden">
+      <section id="projects" className="py-16 sm:py-24 px-4 sm:px-6 bg-[#0f1620] relative overflow-hidden">
         {/* Background decorative elements */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5"></div>
         <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
@@ -705,7 +703,7 @@ export default function SinglePagePortfolio() {
                 My Work
               </Badge>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
               <span className="bg-gradient-to-r from-white via-primary to-white bg-clip-text text-transparent">
                 Featured Projects
               </span>
@@ -717,7 +715,7 @@ export default function SinglePagePortfolio() {
           </div>
 
           {/* Projects Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-16">
             {projects.map((project) => (
               <ProjectCard key={project.id} project={project} />
             ))}
@@ -755,10 +753,10 @@ export default function SinglePagePortfolio() {
       <CertificationsSection />
 
       {/* CONTACT SECTION */}
-      <section id="contact" className="py-24 px-4 bg-background">
+      <section id="contact" className="py-16 sm:py-24 px-4 sm:px-6 bg-background">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Get In Touch</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">Get In Touch</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               I'm actively seeking internship opportunities in QA Engineering and Web Development.
               Let's collaborate to build scalable solutions.
@@ -849,7 +847,7 @@ export default function SinglePagePortfolio() {
                     <form onSubmit={handleSubmit} className="space-y-6">
                       <div className="grid md:grid-cols-2 gap-4">
                         <div className="space-y-2">
-                          <Label htmlFor="name">Full Name</Label>
+                          <Label htmlFor="name" className="text-slate-100">Full Name</Label>
                           <div className="relative">
                             <User className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                             <Input
@@ -858,13 +856,13 @@ export default function SinglePagePortfolio() {
                               placeholder="Your full name"
                               value={formData.name}
                               onChange={handleInputChange}
-                              className="pl-10"
+                              className="pl-10 bg-[#0f1a2f]/85 border-primary/40 text-slate-100 placeholder:text-slate-400 focus-visible:ring-2 focus-visible:ring-primary/60 focus-visible:border-primary"
                               required
                             />
                           </div>
                         </div>
                         <div className="space-y-2">
-                          <Label htmlFor="email">Email Address</Label>
+                          <Label htmlFor="email" className="text-slate-100">Email Address</Label>
                           <div className="relative">
                             <Mail className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                             <Input
@@ -874,25 +872,26 @@ export default function SinglePagePortfolio() {
                               placeholder="your.email@example.com"
                               value={formData.email}
                               onChange={handleInputChange}
-                              className="pl-10"
+                              className="pl-10 bg-[#0f1a2f]/85 border-primary/40 text-slate-100 placeholder:text-slate-400 focus-visible:ring-2 focus-visible:ring-primary/60 focus-visible:border-primary"
                               required
                             />
                           </div>
                         </div>
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="subject">Subject</Label>
+                        <Label htmlFor="subject" className="text-slate-100">Subject</Label>
                         <Input
                           id="subject"
                           name="subject"
                           placeholder="What would you like to discuss?"
                           value={formData.subject}
                           onChange={handleInputChange}
+                          className="bg-[#0f1a2f]/85 border-primary/40 text-slate-100 placeholder:text-slate-400 focus-visible:ring-2 focus-visible:ring-primary/60 focus-visible:border-primary"
                           required
                         />
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="message">Message</Label>
+                        <Label htmlFor="message" className="text-slate-100">Message</Label>
                         <Textarea
                           id="message"
                           name="message"
@@ -900,6 +899,7 @@ export default function SinglePagePortfolio() {
                           value={formData.message}
                           onChange={handleInputChange}
                           rows={6}
+                          className="bg-[#0f1a2f]/85 border-primary/40 text-slate-100 placeholder:text-slate-400 focus-visible:ring-2 focus-visible:ring-primary/60 focus-visible:border-primary"
                           required
                         />
                       </div>

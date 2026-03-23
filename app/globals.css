@@ -9,6 +9,10 @@ html {
   scroll-padding-top: 80px; /* Offset for fixed header */
 }
 
+section[id] {
+  scroll-margin-top: 92px;
+}
+
 :root {
   /* Updated color scheme for professional IT portfolio */
   --background: oklch(1 0 0); /* #ffffff */
@@ -130,6 +134,18 @@ html {
       @apply bg-background text-foreground;
     }
   }
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
 
 /* Modern Animations */
 @keyframes gradient {

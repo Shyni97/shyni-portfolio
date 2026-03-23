@@ -59,22 +59,24 @@ export function Navigation() {
         ? 'bg-background/80 backdrop-blur-xl border-b border-border/50 shadow-lg py-2' 
         : 'bg-background/95 backdrop-blur-sm border-b border-border py-3'
     }`}>
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo with glow effect */}
-          <Link href="/" className="flex items-center hover:opacity-80 transition-all duration-300 -ml-24 group">
+          <Link href="/" className="flex shrink-0 items-center hover:opacity-80 transition-all duration-300 group">
             <div className="relative">
               <div className="absolute -inset-2 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-lg blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="relative rounded-xl border border-white/70 bg-white/90 px-2 py-1 shadow-[0_6px_22px_rgba(255,255,255,0.22)] backdrop-blur-sm">
               <Image 
                 src="/Shyni Atapattu.png" 
                 alt="Shyni Atapattu Logo" 
                 width={200} 
                 height={50}
-                className={`h-14 w-auto relative transition-transform duration-300 group-hover:scale-105 ${
-                  scrolled ? 'h-12' : 'h-14'
+                className={`h-10 w-auto sm:h-12 relative transition-transform duration-300 group-hover:scale-105 ${
+                  scrolled ? 'sm:h-10' : 'sm:h-12'
                 }`}
                 priority
               />
+              </div>
             </div>
           </Link>
 
@@ -126,7 +128,8 @@ export function Navigation() {
 
         {/* Mobile Navigation with slide animation */}
         {isOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-border pt-4 animate-slide-down">
+          <div className="md:hidden mt-3 animate-slide-down">
+            <div className="rounded-xl border border-border/80 bg-background/95 backdrop-blur-xl p-3 shadow-xl">
             <div className="flex flex-col gap-2">
               {navItems.map((item, index) => {
                 const Icon = item.icon
@@ -155,6 +158,7 @@ export function Navigation() {
                   </div>
                 )
               })}
+            </div>
             </div>
           </div>
         )}
